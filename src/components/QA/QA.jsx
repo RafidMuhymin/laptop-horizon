@@ -3,15 +3,16 @@ export default function QA() {
     <footer className="p-5">
       <h1 className="mb-3 text-center">Questions And Answers</h1>
 
-      {/* <h2>1. How does React work?</h2>
+      <h2>1. How does React work?</h2>
       <p>
-        React is a JavaScript library for building user interfaces. It is
-        maintained by Facebook and a community of individual developers and
-        companies. React can be used as a base in the development of single-page
-        or mobile applications. However, React can also be used in the
-        development of server-side rendering applications by itself or as a
-        framework for the development of reusable UI components.
-      </p> */}
+        React is a JavaScript library for building user interfaces. React takes
+        the entire app and then renders it to the DOM. It keeps a virtual copy
+        of the DOM in the memory for faster access and operations. If any state
+        of the app or a component changes, React creates a new copy of the VDOM
+        and then compares it with the current VDOM. It is called
+        <strong> dom-diffing</strong>. If it finds any changes it updates only
+        the changed parts. It is how React works.
+      </p>
 
       <h3>2. What is the difference between Props and State?</h3>
       <p>
