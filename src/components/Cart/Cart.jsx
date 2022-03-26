@@ -5,7 +5,7 @@ import PurchaseMessage from "../Modals/PurchaseMessage/PurchaseMessage";
 
 export default function Cart({ selectedLaptopsState }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalChildren, setModalChildren] = useState(null);
+  const [modalMessage, setModalMessage] = useState(null);
   const [randomSelectionErrorMessage, setRandomSelectionErrorMessage] =
     useState(null);
 
@@ -38,7 +38,7 @@ export default function Cart({ selectedLaptopsState }) {
       const randomLaptop =
         selectedLaptops[Math.floor(Math.random() * selectedLaptops.length)];
 
-      setModalChildren(
+      setModalMessage(
         <PurchaseMessage
           laptop={randomLaptop}
           setModalIsOpen={setModalIsOpen}
@@ -116,7 +116,7 @@ export default function Cart({ selectedLaptopsState }) {
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
       >
-        {modalChildren}
+        {modalMessage}
       </Modal>
     </>
   );
