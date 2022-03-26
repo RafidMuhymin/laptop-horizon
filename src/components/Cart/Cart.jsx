@@ -3,11 +3,22 @@ import { Icon } from "@iconify/react";
 export default function Cart({ selectedLaptopsState }) {
   const [selectedLaptops, setSelectedLaptops] = selectedLaptopsState;
 
+  const handleClearCart = () => {
+    setSelectedLaptops([]);
+  };
+
   const handleRemoveFromCart = (name) => {
     setSelectedLaptops(
       selectedLaptops.filter((laptop) => laptop.name !== name)
     );
   };
+
+  // const handleRandomSelection = () => {
+  //   const randomLaptop =
+  //     selectedLaptops[Math.floor(Math.random() * selectedLaptops.length)];
+
+  //   setSelectedLaptops([randomLaptop]);
+  // };
 
   return (
     <>
@@ -48,6 +59,20 @@ export default function Cart({ selectedLaptopsState }) {
           );
         })}
       </div>
+
+      <button
+        // onClick={handleRandomSelection}
+        className="m-3 btn btn-success w-50 d-block mx-auto"
+      >
+        CHOOSE ONE FOR ME
+      </button>
+
+      <button
+        onClick={handleClearCart}
+        className="m-3 btn btn-danger w-50 d-block mx-auto"
+      >
+        CHOOSE AGAIN
+      </button>
     </>
   );
 }
