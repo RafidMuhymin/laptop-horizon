@@ -2,6 +2,7 @@ import { useState } from "react";
 import laptopsData from "../../data/laptops.json";
 import Cart from "../Cart/Cart";
 import Laptop from "../Laptop/Laptop";
+import "./Shop.css";
 
 export default function Shop() {
   const selectedLaptopsState = useState([]);
@@ -20,7 +21,7 @@ export default function Shop() {
         })}
       </div>
 
-      <div className="col-12 col-xl-4">
+      <div className="cart col-12 col-xl-4 p-3 rounded-3">
         <Cart selectedLaptopsState={selectedLaptopsState} />
       </div>
     </div>
