@@ -18,7 +18,7 @@ export default function Laptop({ laptop, selectedLaptopsState }) {
         <p className="fs-5">Price: ${price}</p>
         <button
           onClick={handleAddToCart}
-          className="btn btn-primary w-75 mx-auto gap-1 d-inline-flex justify-content-between align-items-center"
+          className="btn btn-primary px-3 mx-auto gap-2 d-inline-flex justify-content-between align-items-center"
         >
           Add to Cart
           <Icon icon="ant-design:shopping-cart-outlined" />
