@@ -6,6 +6,8 @@ import PurchaseMessage from "../Modals/PurchaseMessage/PurchaseMessage";
 export default function Cart({ selectedLaptopsState }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalChildren, setModalChildren] = useState(null);
+  const [randomSelectionErrorMessage, setRandomSelectionErrorMessage] =
+    useState(null);
 
   const [selectedLaptops, setSelectedLaptops] = selectedLaptopsState;
 
@@ -20,60 +22,88 @@ export default function Cart({ selectedLaptopsState }) {
   };
 
   const handleRandomSelection = () => {
-    const randomLaptop =
-      selectedLaptops[Math.floor(Math.random() * selectedLaptops.length)];
+    if (selectedLaptops.length < 1) {
+      setRandomSelectionErrorMessage(
+        <p className="text-center text-danger fs-5">
+          Add some laptops to your cart first!
+        </p>
+      );
 
-    setModalChildren(
-      <PurchaseMessage laptop={randomLaptop} setModalIsOpen={setModalIsOpen} />
-    );
+      setTimeout(() => {
+        setRandomSelectionErrorMessage(null);
+      }, 1500);
+    } else {
+      setRandomSelectionErrorMessage(null);
 
-    setModalIsOpen(true);
+      const randomLaptop =
+        selectedLaptops[Math.floor(Math.random() * selectedLaptops.length)];
+
+      setModalChildren(
+        <PurchaseMessage
+          laptop={randomLaptop}
+          setModalIsOpen={setModalIsOpen}
+        />
+      );
+
+      setModalIsOpen(true);
+    }
   };
 
   return (
     <>
-      <h1 className="text-center">Cart</h1>
-      <div className="d-flex flex-column gap-3 p-3">
-        {selectedLaptops.map(({ name, image }) => {
-          return (
-            <div
-              key={name}
-              className="text-center mw-100 d-flex gap-1 align-items-center justify-content-between"
-            >
-              <img
-                src={image}
-                alt={name}
-                style={{
-                  width: "3rem",
-                  height: "3rem",
-                  borderRadius: "50%",
-                }}
-              />
+      <h2 className="text-center">Cart</h2>
 
-              <p className="m-0 fs-5">{name}</p>
+      {selectedLaptops.length < 1 && (
+        <p className="mt-2 fs-4 text-center">No laptops have been selected!</p>
+      )}
 
-              <button
-                className="btn"
-                onClick={() => handleRemoveFromCart(name)}
+      {selectedLaptops.length > 0 && (
+        <div className="d-flex flex-column gap-3 p-3">
+          {selectedLaptops.map(({ name, image }) => {
+            return (
+              <div
+                key={name}
+                className="text-center mw-100 d-flex gap-1 align-items-center justify-content-between"
               >
-                <Icon
-                  icon="ant-design:delete-filled"
+                <img
+                  src={image}
+                  alt={name}
                   style={{
-                    width: "2rem",
-                    height: "2rem",
+                    width: "3rem",
+                    height: "3rem",
+                    borderRadius: "50%",
                   }}
                 />
-              </button>
-            </div>
-          );
-        })}
-      </div>
+
+                <p className="m-0 fs-5">{name}</p>
+
+                <button
+                  className="btn"
+                  onClick={() => handleRemoveFromCart(name)}
+                >
+                  <Icon
+                    icon="ant-design:delete-filled"
+                    style={{
+                      width: "2rem",
+                      height: "2rem",
+                    }}
+                  />
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       <button
         onClick={handleRandomSelection}
         className="m-3 btn btn-success w-50 d-block mx-auto"
       >
         CHOOSE ONE FOR ME
       </button>
+
+      {randomSelectionErrorMessage}
+
       <button
         onClick={handleClearCart}
         className="m-3 btn btn-danger w-50 d-block mx-auto"
