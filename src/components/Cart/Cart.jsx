@@ -42,6 +42,7 @@ export default function Cart({ selectedLaptopsState }) {
         <PurchaseMessage
           laptop={randomLaptop}
           setModalIsOpen={setModalIsOpen}
+          setSelectedLaptops={setSelectedLaptops}
         />
       );
 

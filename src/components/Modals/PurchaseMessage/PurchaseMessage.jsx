@@ -1,12 +1,17 @@
 import { useState } from "react";
 
-export default function PurchaseMessage({ laptop, setModalIsOpen }) {
+export default function PurchaseMessage({
+  laptop,
+  setModalIsOpen,
+  setSelectedLaptops,
+}) {
   const [purchaseMessage, setPurchaseMessage] = useState(null);
 
   const { name, price, image } = laptop;
 
   const closeModal = () => {
     setModalIsOpen(false);
+    setSelectedLaptops([]);
   };
 
   const handleBuy = () => {
