@@ -4,12 +4,6 @@
     "price": 999,
     "image": "https://cdn.vox-cdn.com/thumbor/fg7blk1_lX15F_8NtNgMCi28kgw=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22046471/vpavic_4291_20201113_0411.0.jpg"
   },
-
-  {
-    "name": "MACBOOK PRO (16-INCH)",
-    "price": 2299,
-    "image": "https://cdn.vox-cdn.com/thumbor/zGSH_4QtgoWtcPSOkljwzMgLdos=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22965891/akrales_211027_4820_0399.jpg"
-  },
   {
     "name": "MacBook Pro (14-INCH)",
     "price": 1749,
@@ -59,5 +53,10 @@
     "name": "LENOVO YOGA 9I",
     "price": 1750,
     "image": "https://cdn.vox-cdn.com/thumbor/gFli3oVh_dQ6hpsjcMD15jVJXe8=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22651293/akrales_20210609_4596_0120.jpg"
+  },
+  {
+    "name": "RAZER BLADE 17",
+    "price": 2700,
+    "image": "https://cdn.vox-cdn.com/thumbor/NILxOJfgw7ku4AhQKwxh8K52CX4=/0x0:2040x1360/920x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/23262002/cfaulkner_141231_5037_0010.jpg"
   }
 ]
