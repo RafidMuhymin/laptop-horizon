@@ -6,7 +6,7 @@ export default function Laptop({ laptop, selectedLaptopsState }) {
   const [selectedLaptops, setSelectedLaptops] = selectedLaptopsState;
 
   const handleAddToCart = () => {
-    if (!selectedLaptops.includes(laptop)) {
+    if (!selectedLaptops.includes(laptop) && selectedLaptops.length < 4) {
       setSelectedLaptops([...selectedLaptops, laptop]);
     }
   };
