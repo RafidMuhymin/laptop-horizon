@@ -1,7 +1,13 @@
 import { Icon } from "@iconify/react";
 
-export default function Laptop({ laptop }) {
+export default function Laptop({ laptop, selectedLaptopsState }) {
   const { name, price, image } = laptop;
+
+  const [selectedLaptops, setSelectedLaptops] = selectedLaptopsState;
+
+  const handleAddToCart = () => {
+    setSelectedLaptops([...selectedLaptops, laptop]);
+  };
 
   return (
     <div className="d-flex flex-column">
@@ -10,7 +16,10 @@ export default function Laptop({ laptop }) {
       <div className="p-3 pb-4 text-center flex-grow-1 d-flex flex-column justify-content-between">
         <h3>{name}</h3>
         <p className="fs-5">Price: ${price}</p>
-        <button className="btn btn-primary w-75 mx-auto gap-1 d-inline-flex justify-content-between align-items-center">
+        <button
+          onClick={handleAddToCart}
+          className="btn btn-primary w-75 mx-auto gap-1 d-inline-flex justify-content-between align-items-center"
+        >
           Add to Cart
           <Icon icon="ant-design:shopping-cart-outlined" />
         </button>
