@@ -1,6 +1,12 @@
 [
   {
-    "name": "MACBOOK PRO (16-INCH) ",
+    "name": "MACBOOK AIR",
+    "price": 999,
+    "image": "https://cdn.vox-cdn.com/thumbor/fg7blk1_lX15F_8NtNgMCi28kgw=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22046471/vpavic_4291_20201113_0411.0.jpg"
+  },
+
+  {
+    "name": "MACBOOK PRO (16-INCH)",
     "price": 2299,
     "image": "https://cdn.vox-cdn.com/thumbor/zGSH_4QtgoWtcPSOkljwzMgLdos=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22965891/akrales_211027_4820_0399.jpg"
   },
@@ -43,5 +49,15 @@
     "name": "DELL XPS 13",
     "price": 1490,
     "image": "https://cdn.vox-cdn.com/thumbor/V4GYtDZI1UFarz1P6BecJXl_F2g=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22007661/mchin_190124_4274_0004.0.jpg"
+  },
+  {
+    "name": "RAZER BOOK 13",
+    "price": 1000,
+    "image": "https://cdn.vox-cdn.com/thumbor/BPCnZJJrvS3jESzM-Kziq3MuAkM=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22290553/akrales_210203_4381_0116.jpg"
+  },
+  {
+    "name": "LENOVO YOGA 9I",
+    "price": 1750,
+    "image": "https://cdn.vox-cdn.com/thumbor/gFli3oVh_dQ6hpsjcMD15jVJXe8=/0x0:2040x1360/1320x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22651293/akrales_20210609_4596_0120.jpg"
   }
 ]
