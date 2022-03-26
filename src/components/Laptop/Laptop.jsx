@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Laptop({ laptop }) {
   const { name, price, image } = laptop;
 
