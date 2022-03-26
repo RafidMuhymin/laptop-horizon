@@ -1,12 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify/react': ^3.2.0
   '@vitejs/plugin-react': ^1.0.7
   react: ^17.0.2
   react-dom: ^17.0.2
   vite: ^2.8.0
 
 dependencies:
+  '@iconify/react': 3.2.0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
@@ -283,6 +285,10 @@ packages:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
     dev: true
+
+  /@iconify/react/3.2.0:
+    resolution: {integrity: sha512-nHmPeBGn4KKS8DwDjGrZ9SLpoMmZ+dKZ53s2msBftg6srESMWBUOMW/XBMRjnUjzwQQchguVEhhh59LSSAia/g==}
+    dev: false
 
   /@jridgewell/resolve-uri/3.0.5:
     resolution: {integrity: sha512-VPeQ7+wH0itvQxnG+lIzWgkysKIr3L9sslimFW55rHMdGu/qCQ5z5h9zq4gI8uBtqkpHhsF4Z/OwExufUCThew==}
