@@ -3,6 +3,12 @@ import { Icon } from "@iconify/react";
 export default function Cart({ selectedLaptopsState }) {
   const [selectedLaptops, setSelectedLaptops] = selectedLaptopsState;
 
+  const handleRemoveFromCart = (name) => {
+    setSelectedLaptops(
+      selectedLaptops.filter((laptop) => laptop.name !== name)
+    );
+  };
+
   return (
     <>
       <h1 className="text-center">Cart</h1>
@@ -26,7 +32,10 @@ export default function Cart({ selectedLaptopsState }) {
 
               <p className="m-0 fs-5">{name}</p>
 
-              <button className="btn">
+              <button
+                className="btn"
+                onClick={() => handleRemoveFromCart(name)}
+              >
                 <Icon
                   icon="ant-design:delete-filled"
                   style={{
