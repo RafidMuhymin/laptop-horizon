@@ -113,7 +113,7 @@ export default function Cart({ selectedLaptopsState }) {
       </button>
 
       <Modal
-        style={{ content: { inset: "25%" } }}
+        style={{ content: { inset: "20%" } }}
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
       >
