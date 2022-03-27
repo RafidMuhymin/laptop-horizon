@@ -1,5 +1,5 @@
 import { useState } from "react";
-import laptopsData from "../../data/laptops.json";
+import laptopsData from "../../data/laptops";
 import Cart from "../Cart/Cart";
 import Laptop from "../Laptop/Laptop";
 import "./Shop.css";
